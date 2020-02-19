@@ -71,9 +71,9 @@ For the servo, we connect to pin 7 for its output, pin 2 for its DC power, and p
 </div>
 	<p>In AWS Lambda, we are following the document and create AWS lambda successful:</p>
 	<a href="https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html">Lambda Tutorial</a>
+<p>In AWS Lambda, we use python as the main language. The source code for AWS Lambda is:</p>
 
-	<p>In AWS Lambda, we use python as the main language. The source code for AWS Lambda is:</p>
-	<xmp>
+```
 from __future__ import print_function
 import boto3
 from decimal import Decimal
@@ -164,7 +164,7 @@ After we implement the code, we try to test it with this test event:
     }
   ]
 }
-</xmp>
+```
 <p>It works fine for us. As everything are setting up, we have our final product in figure 6.
 </p>
 <div class="center_things">
