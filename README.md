@@ -1,9 +1,4 @@
 <h1>SmartDoor Project</h1> 
-<style>
-      .img-container {
-        text-align: center;
-      }
-</style>
 <p><strong>Introduction:</strong> There are many smart door system or smart lock on the market, and the price are very high from a hundred to thousand a door lock. Thus, it comes to an idea making a smart door system for myself.</p>
 <p><strong>Idea:</strong> For this project, the idea is using the services of AWS for Raspberry Pi 3. When a person scan RFID card, it will check the card is correct or not. If the card is correct, the system start to take a picture of the person and compare their face with their face is store in AWS bucket. If the face is the same, the door opens for 10 second and close after that.
 </p>
