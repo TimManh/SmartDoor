@@ -35,13 +35,13 @@
 <p>3.3V <–> 1</p>
 	</div>
 <p>In the raspberry pi CLI, we type the following commands:</p>
-	```
-	sudo raspi-config
-	```
+```
+sudo raspi-config
+```
 <p>Then we enable the SPI, camera module, SSH. After that, we restart the Raspberry pi:</p>
-	```
-	sudo reboot
-	```
+```
+sudo reboot
+```
 <p>	Then we run the two previous source code to write and read on RFID.
 For the servo, we connect to pin 7 for its output, pin 2 for its DC power, and pin 6 to the ground. For the active buzzer, we connect to pin 3, pin 6 to the ground. First thing to set up AWS IoT core, we must register a thing in AWS</p>
 
