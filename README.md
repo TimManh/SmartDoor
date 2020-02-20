@@ -2,7 +2,7 @@
 <p><strong>Introduction:</strong> There are many smart door system or smart lock on the market, and the price are very high from a hundred to thousand a door lock. Thus, it comes to an idea making a smart door system for myself.</p>
 <p><strong>Idea:</strong> For this project, the idea is using the services of AWS for Raspberry Pi 3. When a person scan RFID card, it will check the card is correct or not. If the card is correct, the system start to take a picture of the person and compare their face with their face is store in AWS bucket. If the face is the same, the door opens for 10 second and close after that.
 </p>
-<div class="center_things"> <!-- Block parent element -->
+<div align="center"> <!-- Block parent element -->
       <img src="./OverallPic.png">
       <p>Figure 1. Diagram of flow in the project</p>
 </div>
@@ -19,7 +19,7 @@
 	</ul>
 <p><strong>Procedure:</strong></p>
 	<p>	First of all, we must write to a RFID card for a specific user and check out writeRFID.py to write on the card. To test the RFID card, you should check out read.py. For the connection the RFID to raspberry pi follow these pins :</p>
-	<div class="center_things">
+	<div align ="center">
 <p>SDA <–> 24</p>
 <p>SCK <–> 23</p>
 <p>MOSI <–> 19</p>
@@ -38,7 +38,7 @@ For the servo, we connect to pin 7 for its output, pin 2 for its DC power, and p
 
 <p>	After checking RIFD card and hardware connection finish, we move on to generate AWS cloud to compare user face with face that is stored in S3. AWS Lambda will be trigger  Rekognition whenever the captured image is sent to S3.
 </p>
-<div class="center_things">
+<div align="center">
 	<img src="./SetupRas.png">
 	<p>Figure 2. Register a thing in AWS</p>
 </div>
@@ -47,7 +47,7 @@ For the servo, we connect to pin 7 for its output, pin 2 for its DC power, and p
 <p>Next step is creating a bucket S3 by following this document:</p>
 	<a href="https://docs.aws.amazon.com/quickstarts/latest/s3backup/step-1-create-bucket.html">How to create bucket S3</a>
 <p>In that bucket, we make a file name “target”. In that file, we store face that need to compare. In figure 3 and figure 4, the target folder is generated and the person image inside that folder.</p>
-<div class="center_things">
+<div align ="center">
 	<img src="./s3_1.png">
 	<p>Figure 3. The target folder inside the bucket</p>
 	<img src="./s3_2.png">
@@ -58,7 +58,7 @@ For the servo, we connect to pin 7 for its output, pin 2 for its DC power, and p
 <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM role setup</a>
 <p>we are able to generate IAM role. The role should have following policies in figure 5.
 </p>
-<div class="center_things">
+<div align ="center">
 	<img src="./IAMrole.png">
 	<p>Figure 5. The policies for the IAM role
 </p>
@@ -161,7 +161,7 @@ After we implement the code, we try to test it with this test event:
 ```
 <p>It works fine for us. As everything are setting up, we have our final product in figure 6.
 </p>
-<div class="center_things">
+<div align ="center">
 	<img src="./FinalProduct.png">
 	<p>Figure 6. The complete Smart Door System</p>
 </div>
